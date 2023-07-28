@@ -75,3 +75,64 @@ for (row in matrix) {
 1
 4 5 6
 ```
+
+# 객체
+
+```kotlin
+class Product constructor(val categoryLabel: String)
+class Product(val categoryLabel: String) //생성자의 종류가 한개만 있을 때는 이렇게 선언 가능
+
+val product = Product("패션", "겨울 패딩")
+```
+
+## 클래스, 인터페이스
+
+Any가 최상위 클래스
+
+## 함수
+
+특정 동작을 수행하는 묶음
+
+선언 방식 : 중괄호, single expression
+
+```kotlin
+//중괄호 방식
+fun sum(a: Int, b: Int): Int{
+	return a + b
+}
+//single expression
+fun sum(a: Int, b: Int): Int = a + b
+```
+배치 위치 : top-level / 클래스 멤버
+
+## data class
+
+데이터를 담는 용도의 클래스
+
+equals, toString, hashCode 메서드를 작성하지않아도 알아서 작성해줌
+
+보통 data의 변경을 하는 것을 막기위해 프로퍼티들을 val로 선언해주는 걸 추천함
+
+## 가시성 변경자 - Packages
+
+패키지 내부의 top-level 선언시 가시성 변경자에 따라 참조가능한 범위가 다름
+
+public - 기본값 어느 위치에서든 참조가능
+
+private - 선언한 파일 내부에서만 참조가능
+
+internal - 같은 module 안에서만 참조가능
+
+protected - 사용불가
+
+## 가시성 변경자 - Class members
+
+클래스 멤버의 가시성 변경자에 따라 참조가능한 범위가 다름
+
+public - 기본값 어느 위치에서든 참조 가능
+
+private - 선언한 class 내부에서만 참조 가능
+
+internal - 같은 module안에서만 참조 가능
+
+protected - private와 동일. + subclass 에서도 참조 가능
