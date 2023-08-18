@@ -1,4 +1,4 @@
 package my.mongo.kotlinmongodemo.config
 
-class MongoClientConfig {
+class MongoConfig {
 }
