@@ -7,5 +7,6 @@ class Customer{
         val chooseItem = menu.choose(menuName)
         val coffee = employee.takeOrder(chooseItem, Baristar())
         println("주문하신 ${coffee.name} 나왔습니다.")
+
     }
 }
